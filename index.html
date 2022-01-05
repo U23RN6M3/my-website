@@ -1,12 +1,13 @@
+
 <!DOCTYPE html>
 <!-- Template by html.am -->
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>3 Column, Right Menus</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>2 Column Layout &mdash; Left Menu with Header &amp; Footer</title>
 		<style type="text/css">
 		
-			body{
+			body {
 				margin:0;
 				padding:0;
 				font-family: Sans-Serif;
@@ -14,7 +15,7 @@
 			}
 			
 			#header {
-				background: #BCCE98;
+				background: #ccc;
 				height: 100px;
 			}
 			
@@ -23,52 +24,42 @@
 				padding-top: 15px;
 			}
 			
-			#mainwrapper {
-				overflow: hidden;
-			}
-			
-			#contentwrapper{
+			main {
+				padding-bottom: 10010px;
+				margin-bottom: -10000px;
 				float: left;
 				width: 100%;
 			}
 			
-			#content {
-				margin-right: 460px; /* Width of '#rightmenu' and '#leftmenu' combined. */
+			#nav {
 				padding-bottom: 10010px;
 				margin-bottom: -10000px;
-			}
-			
-			#leftmenu {
 				float: left;
-				width: 250px;
-				margin-left: -460px; /* Width of '#rightmenu' and '#leftmenu' combined. */
-				padding-bottom: 10010px;
-				margin-bottom: -10000px;
-				background: #F7FDEB;
+				width: 230px;
+				margin-left: -100%;
+				background: #eee;
 			}
 			
-			#rightmenu {
-				float: left;
-				width: 210px;
-				margin-left: -210px;
-				padding-bottom: 10010px;
-				margin-bottom: -10000px;
-				background: #DAE9BC;
-			}
-			
-			#footer{
+			#footer {
 				clear: left;
 				width: 100%;
-				background: #BCCE98;
+				background: #ccc;
 				text-align: center;
-				padding: 5px 0;
+				padding: 4px 0;
+			}
+	
+			#wrapper {
+				overflow: hidden;
+			}
+						
+			#content {
+				margin-left: 230px; /* Same as 'nav' width */
 			}
 			
-			.innertube{
+			.innertube {
 				margin: 15px; /* Padding for content */
 				margin-top: 0;
 			}
-		
 		
 			p {
 				color: #555;
@@ -84,47 +75,33 @@
 				color: darkgreen;
 				text-decoration: none;
 			}
-			
-		</style>
 		
-		<script type="text/javascript">
-			/* =============================
-			This script generates sample text for the body content. 
-			You can remove this script and any reference to it. 
-			 ============================= */
-			var bodyText=["balls", "balls", "alota balls", "alot of balls", "</p><p>i like them in yo jaws.", "Peace comes from within. Do not seek it without.", "<h3>Heading</h3><p>The most important moment of your life is now. The most important person in your life is the one you are with now, and the most important activity in your life is the one you are involved with now."]
-			function generateText(sentenceCount){
-				for (var i=0; i<sentenceCount; i++)
-				document.write(bodyText[Math.floor(Math.random()*7)]+" ")
-			}
-		</script>	
+		</style>	
+	
 	</head>
 	
-	<body>
-			<header id="header">
-				<div class="innertube">
-					<h1>Header...</h1>
-				</div>
-			</header>
-		<div id="mainwrapper">
+	<body>		
+
+		<header id="header">
+			<div class="innertube">
+				<h1>Header...</h1>
+			</div>
+		</header>
 		
-			<div id="contentwrapper">
+		<div id="wrapper">
+		
+			<main>
 				<div id="content">
 					<div class="innertube">
 						<h1>Heading</h1>
-						<p><script>generateText(15)</script></p></div>
+						<p>Hello</p>
+					</div>
 				</div>
-			</div>
+			</main>
 			
-			<nav id="leftmenu">
+			<nav id="nav">
 				<div class="innertube">
-					<p><script type="text/javascript">generateText(5)</script></p>
-				</div>
-			</nav>
-			
-			<nav id="rightmenu">
-				<div class="innertube">
-					<h3>Right heading</h3>
+					<h3>Left heading</h3>
 					<ul>
 						<li><a href="#">Link 1</a></li>
 						<li><a href="#">Link 2</a></li>
@@ -132,7 +109,7 @@
 						<li><a href="#">Link 4</a></li>
 						<li><a href="#">Link 5</a></li>
 					</ul>
-					<h3>Right heading</h3>
+					<h3>Left heading</h3>
 					<ul>
 						<li><a href="#">Link 1</a></li>
 						<li><a href="#">Link 2</a></li>
@@ -140,7 +117,7 @@
 						<li><a href="#">Link 4</a></li>
 						<li><a href="#">Link 5</a></li>
 					</ul>
-					<h3>Right heading</h3>
+					<h3>Left heading</h3>
 					<ul>
 						<li><a href="#">Link 1</a></li>
 						<li><a href="#">Link 2</a></li>
@@ -150,13 +127,14 @@
 					</ul>
 				</div>
 			</nav>
+		
 		</div>
-			<footer id="footer">
-				<div class="innertube">
-					<p>Footer...</p>
-				</div>
-			</footer>
+		
+		<footer id="footer">
+			<div class="innertube">
+				<p>Footer...</p>
+			</div>
+		</footer>
 	
 	</body>
-
 </html>
